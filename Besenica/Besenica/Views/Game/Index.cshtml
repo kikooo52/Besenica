@@ -1,0 +1,93 @@
+﻿@model IEnumerable<Besenica.Models.ViewModel.GameResultViewModel>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<div>
+    <h1>Бесеница</h1>
+    <img src="~/Content/Images/Besenica.png" />
+
+    <br />
+    @if (Request.IsAuthenticated)
+    {
+        @Html.ActionLink("NEW GAME", "GameResult")
+    }
+    else
+    {
+        <br />
+        @Html.ActionLink("NEW GAME", "Register", controllerName: "Account")
+        <br />
+    }
+
+    <h4>Result</h4>
+    <div style="height:250px; overflow:auto;">
+        <table class="table">
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.UserName)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.IsAnswered)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Answer)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Guesses)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Duration)
+                </th>
+            </tr>
+
+            @foreach (var item in Model)
+            {
+                var newDuration = item.Duration.ToString("mm:ss");
+                if (item.IsAnswered)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.UserName)
+                        </td>
+                        <td>
+                            True
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Answer)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Guesses)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => newDuration)
+                        </td>
+                    </tr>
+                }
+                else
+                {
+                    <tr style="background-color: lightcoral">
+                        <td>
+                            @Html.DisplayFor(modelItem => item.UserName)
+                        </td>
+                        <td>
+                            False
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Answer)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Guesses)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => newDuration)
+                        </td>
+                    </tr>
+                }
+            }
+
+        </table>
+    </div>
+</div>
+
+

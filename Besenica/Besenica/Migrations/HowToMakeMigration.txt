@@ -1,0 +1,8 @@
+﻿1 - Clean
+2 - Build
+3 - add-migration InitialCreate
+4 - update-database -Verbose
+
+
+<add name="DefaultConnection" connectionString="Data Source=(LocalDb)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\aspnet-Besenica-20170119124041.mdf;Initial Catalog=aspnet-Besenica-20170119124041;Integrated Security=True" providerName="System.Data.SqlClient" />
+<add name="ApplicationDbContext" connectionString="Data Source=.\SQLEXPRESS;Initial Catalog=Besenica1;Trusted_Connection=False;User ID=sa;Password=123qweASD;Pooling=false" providerName="System.Data.SqlClient" />
