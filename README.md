@@ -8,7 +8,7 @@ Animals - Хинтовете съм ги измислил да са тъпи
 
 Countries - Имах ги свалени и реших да е с държави на не с градове. Хинтровете са съкращението на държавата(Bulgaria - bg)
 
-GameResult - Има “Answer”, “UserName”, “Duration”, “Guesses”, “IsAnwered”. Първо имаше ралаци с Users и Answers обаче не ги опростих щото не ми стига времето а аз просто записвам резултата за юзъра и неговире отговори.
+GameResult - Има “Answer”, “UserName”, “Duration”, “Guesses”, “IsAnwered”.
 
 Answer - Това е обща таблица за животните и държавите.
 
