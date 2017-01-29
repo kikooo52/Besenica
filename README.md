@@ -2,6 +2,7 @@
 
 MVC project - бесеница
 
+Ако ги няма(Държавите и животните) трябва да се сииднат командата е: update-database -Verbose в "Tools > NuGet Package Manager > Package Manager Console command"
 
 1 - Моделите
 Animals - Хинтовете съм ги измислил да са тъпи
